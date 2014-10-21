@@ -44,13 +44,13 @@ end
 base_url = "http://www.collectionslink.org.uk/assets/thesaurus_bmon/"
 index_page = "Objintro.htm"
 index_doc = Nokogiri::HTML(open(base_url + index_page))
-puts index_doc.to_s
+#puts index_doc.to_s
 thes_urls = []
 
 index_doc.xpath('//@href').each do |pages|
   thes_url = pages.inner_text
   if (thes_url.slice(0..4) === "index")
-    puts base_url + thes_url
+    #puts base_url + thes_url
     thes_urls.push(base_url + thes_url)
   end
 
