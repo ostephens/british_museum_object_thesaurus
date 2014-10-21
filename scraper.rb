@@ -1,3 +1,4 @@
+require 'scraperwiki'
 require 'nokogiri'
 require 'uri'
 require 'cgi'
