@@ -1,0 +1,5 @@
+This scrapes terms from the British Museum Thesaurus published[1] at http://www.collectionslink.org.uk/assets/thesaurus/Objintro.htm[2], and then finds the URI identifier for the term on the British Museum SPARQL endpoint (http://collection.britishmuseum.org/Sparql). It also looks up the term on the Portable Antiquities Scheme http://finds.org.uk/ to see if the term is used there, and if so records the of that as well. These URIs can be used to further query the SPARQL endpoint, or as identifiers in other systems...
+
+fn1. Thanks to the British Museum Trustees who give permission for it to be used, with attribution, for non-profit purposes.
+
+fn2. It is not clear how current this list is
