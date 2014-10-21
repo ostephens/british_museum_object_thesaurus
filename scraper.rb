@@ -13,7 +13,7 @@ class BMTerm
     attr_accessor :uri, :finds
     
     def getURIfromlabel
-        sparql = "http://collection.britishmuseum.org/Sparql?Syntax=SparqlResults%2FXML&Query=SELECT+%3Fs+WHERE+%0D%0A%7B+%0D%0A%09%3Fs++%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%22" + URI.escape(@label) + "%22%0D%0A%7D+LIMIT+1"
+        sparql = "http://collection.britishmuseum.org/sparql.xml?query=SELECT+%3Fs+WHERE+%0D%0A%7B+%0D%0A%09%3Fs++%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%22" + URI.escape(@label) + "%22%0D%0A%7D+LIMIT+1"
 
       #
       # Then extract thesaurus URI from results set - in binding (name=s) element, in uri element
