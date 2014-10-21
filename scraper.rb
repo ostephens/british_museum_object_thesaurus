@@ -64,7 +64,12 @@ thes_urls.each do |url|
       term.getURIfromlabel
       term.checkFinds
       begin
-        ScraperWiki.save(unique_keys=['term'], data={'term' => term.label,'uri' => term.uri, 'finds_uri' => term.finds})
+        record = {
+            'term' => term.label,
+            'uri' => term.uri,
+            'finds_uri' => term.finds
+        }
+        ScraperWiki.save_sqlite(unique_keys=['term'], record)
         sleep 1
       rescue
         puts "Unable to save record for " + term.label
